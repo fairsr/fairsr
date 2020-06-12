@@ -2,7 +2,7 @@ from model import Test_model
 import torch
 import numpy as np
 import random
-from eval_metrics import *
+from interactions import *
 import pickle
 
 
