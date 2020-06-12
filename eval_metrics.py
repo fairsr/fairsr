@@ -132,6 +132,7 @@ def bias_ERg(list_len_u_pv):
        
 
 if __name__ == '__main__':
+    sum_precision = 0.045573934092409238409
     actual = [[1, 2], [3, 4, 5]]
     predicted = [[10, 20, 1, 30, 40], [10, 3, 20, 4, 5]]
     print(ndcg_k(actual, predicted, 5))
