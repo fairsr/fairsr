@@ -19,23 +19,19 @@ How to implement FairSR on toy dataset?
 Requirements
 ------------
 
-Latest tested combination: Python 3.8.1 + PyTorch 1.4.0 + PyTorch_Geometric 1.4.2.
+Latest tested combination: Python 3.6.6 + PyTorch 1.4.0.
 
 Install [PyTorch](https://pytorch.org/)
 
-Install [PyTorch_Geometric](https://rusty1s.github.io/pytorch_geometric/build/html/notes/installation.html)
-
-Other required python libraries: numpy, scipy, pandas, h5py, networkx, tqdm etc.
-
+Other required python libraries:numpy,tqdm,sklearn,pickle etc.
 
 
 Usages
 ------
 
-### Flixster, Douban and YahooMusic
+### Instagram Check-in Toy Dataset
+Train and evaluate the model (you are strongly recommended to run the program on a machine with GPU)
 
-To train on Flixster, type:
+    python main.py 
 
-    python Main.py --data-name flixster --epochs 40 --testing --ensemble
-
-The results will be saved in "results/flixster\_testmode/". The processed enclosing subgraphs will be saved in "data/flixster/testmode/". Change flixster to douban or yahoo\_music to do the same experiments on Douban and YahooMusic datasets, respectively. Delete --testing to evaluate on a validation set to do hyperparameter tuning.
+The results will show the performance of FairSR by ranking metric Precision@k, NDCG@k and Recall@k.
