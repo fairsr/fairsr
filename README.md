@@ -1,5 +1,5 @@
 # fairsr
-RetaGNN QQ sleep to sleep
+RetaGNN QQ 
 
 How to implement FairSR on toy dataset?
 1. git clone 
