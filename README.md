@@ -1,4 +1,11 @@
 # fairsr
+
+![alt text](https://github.com/fairsr/fairsr/blob/master/FairSR_framework.png)
+
+
+
+
+
 RetaGNN QQ will go to ICDE. Maybe ICDE is ICDM's friend.
 
 How to implement FairSR on toy dataset?
