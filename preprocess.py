@@ -15,7 +15,7 @@ class Data_process:
         self.ny_demo = open(ny_demo_path,'r').readlines()
 
         self.dict_restrict = {
-            'year':[2016],
+            'year':[2015,2016,2017],
             'num_checkin':41,
             'test_X_num':args.L_hgn,
             'test_Y_num':20,
