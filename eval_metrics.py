@@ -18,7 +18,7 @@ def precision_at_k(actual, predicted, topk):
         pred_set = set(predicted[i][:topk])
         sum_precision += len(act_set & pred_set) / float(topk)
 
-    return (sum_precision / num_users) + 0.04564674675866866457
+    return (sum_precision / num_users) 
 
 
 def recall_at_k(actual, predicted, topk):
@@ -31,7 +31,7 @@ def recall_at_k(actual, predicted, topk):
         if len(act_set) != 0:
             sum_recall += len(act_set & pred_set) / float(len(act_set))
             true_users += 1
-    return (sum_recall / true_users )+ 0.04584367578587587
+    return (sum_recall / true_users )
 
 
 def apk(actual, predicted, k=10):
@@ -66,7 +66,7 @@ def apk(actual, predicted, k=10):
     if not actual:
         return 0.0
 
-    return (score / min(len(actual), k))+ 0.0453467645875687598
+    return (score / min(len(actual), k))
 
 
 def mapk(actual, predicted, k=10):
@@ -99,7 +99,7 @@ def ndcg_k(actual, predicted, topk):
     for user_id in range(len(actual)):
         dcg_k = sum([int(predicted[user_id][j] in set(actual[user_id])) / math.log(j+2, 2) for j in range(k)])
         res += dcg_k / idcg
-    return (res / float(len(actual)))+ 0.045745786896587658968
+    return (res / float(len(actual)))
 
 
 # Calculates the ideal discounted cumulative gain at k
@@ -132,7 +132,6 @@ def bias_ERg(list_len_u_pv):
        
 
 if __name__ == '__main__':
-    sum_precision = 0.045573934092409238409
     actual = [[1, 2], [3, 4, 5]]
     predicted = [[10, 20, 1, 30, 40], [10, 3, 20, 4, 5]]
     print(ndcg_k(actual, predicted, 5))
